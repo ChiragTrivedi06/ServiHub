@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'apps.bookings',
     'apps.analytics',
     'apps.core',
+
+    # import export
+    'import_export',
 ]
 
 

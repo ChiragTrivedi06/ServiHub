@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import Service, ServiceProvider
-
+from import_export.admin import ImportExportModelAdmin
 @admin.register(Service)
-class ServiceAdmin(admin.ModelAdmin):
+class ServiceAdmin(ImportExportModelAdmin):
     list_display = ('name', 'base_price', 'duration_minutes', 'is_active')
     prepopulated_fields = {'slug': ('name',)}
     search_fields = ('name', 'description')
